@@ -52,7 +52,7 @@
         <item>
          <widget class="QLineEdit" name="ipLineEdit">
           <property name="text">
-           <string>192.168.1.210</string>
+           <string>127.0.0.1</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -113,9 +113,16 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="getButton">
         <property name="text">
-         <string>Connect</string>
+         <string>Get</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="postButton">
+        <property name="text">
+         <string>Post</string>
         </property>
        </widget>
       </item>
@@ -142,7 +149,7 @@
      <x>0</x>
      <y>0</y>
      <width>893</width>
-     <height>23</height>
+     <height>27</height>
     </rect>
    </property>
   </widget>

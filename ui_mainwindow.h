@@ -45,7 +45,8 @@ public:
     QLineEdit *pnLineEdit;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_2;
-    QPushButton *pushButton;
+    QPushButton *getButton;
+    QPushButton *postButton;
     QSpacerItem *horizontalSpacer_3;
     QMenuBar *menuBar;
     QStatusBar *statusBar;
@@ -126,10 +127,15 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_2);
 
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        getButton = new QPushButton(centralWidget);
+        getButton->setObjectName(QStringLiteral("getButton"));
 
-        horizontalLayout_4->addWidget(pushButton);
+        horizontalLayout_4->addWidget(getButton);
+
+        postButton = new QPushButton(centralWidget);
+        postButton->setObjectName(QStringLiteral("postButton"));
+
+        horizontalLayout_4->addWidget(postButton);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -141,7 +147,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 893, 23));
+        menuBar->setGeometry(QRect(0, 0, 893, 27));
         MainWindow->setMenuBar(menuBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
@@ -157,10 +163,11 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         label->setText(QApplication::translate("MainWindow", "Connect to Server", 0));
         label_2->setText(QApplication::translate("MainWindow", "IP:", 0));
-        ipLineEdit->setText(QApplication::translate("MainWindow", "192.168.1.210", 0));
+        ipLineEdit->setText(QApplication::translate("MainWindow", "127.0.0.1", 0));
         label_3->setText(QApplication::translate("MainWindow", "PN:", 0));
         pnLineEdit->setText(QApplication::translate("MainWindow", "3000", 0));
-        pushButton->setText(QApplication::translate("MainWindow", "Connect", 0));
+        getButton->setText(QApplication::translate("MainWindow", "Get", 0));
+        postButton->setText(QApplication::translate("MainWindow", "Post", 0));
     } // retranslateUi
 
 };

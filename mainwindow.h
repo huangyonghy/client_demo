@@ -22,7 +22,8 @@ public:
     QByteArray cache;
 
 private slots:
-    void on_pushButton_clicked();
+    void on_getButton_clicked();
+    void on_postButton_clicked();
     void replyFinished( QNetworkReply *reply );
 
 private:
