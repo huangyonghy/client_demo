@@ -1,0 +1,11 @@
+http协议里定义的四种常见数据的post方法，分别是：
+application/www-form-ulrencoded
+multipart/form-data
+application/json
+text/xml
+
+获取请求很中的参数是每个web后台处理的必经之路，nodejs的 express框架 提供了四种方法来实现。
+req.body
+req.query
+req.params
+req.param()
