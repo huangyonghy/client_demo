@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "tools.h"
 
 #include <QDebug>
 #include <QMessageBox>
@@ -14,6 +15,12 @@ MainWindow::MainWindow( QWidget *parent ) :
 {
     ui->setupUi( this );
     setNetwork();
+
+//    QString mac_address = get_localmachine_mac();
+//    qDebug()<<mac_address;
+//    QByteArray mac_address_byte = mac_address.toLatin1();
+//    char *mac_address_char = mac_address_byte.data();
+//    privateConvert(mac_address_char);
 }
 
 void MainWindow::setNetwork()
@@ -21,7 +28,6 @@ void MainWindow::setNetwork()
     manager = new QNetworkAccessManager( this );
     connect( manager, SIGNAL( finished( QNetworkReply* ) ),
              this, SLOT( replyFinished( QNetworkReply* ) ) );
-
 }
 
 MainWindow::~MainWindow()
